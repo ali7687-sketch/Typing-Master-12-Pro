@@ -3,24 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Master Pro | Free Online Typing Speed Test</title>
-    <meta name="description" content="Improve your typing speed and accuracy with Typing Master Pro. Free online typing speed test with real-time WPM calculation.">
+    <title>Typing Master Pro | Free Online Touch Typing & Speed Test</title>
+    <meta name="description" content="Master touch typing online with Typing Master Pro. Free professional typing tutor, courses, speed tests, and real-time WPM analytics with zero subscriptions.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://ali7687-sketch.github.io/Typing-Master-12-Pro/">
-
-    <!-- Load App Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Professional Layout CSS: Side Ad & Bottom Ad Design -->
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
-        header { background: #ffffff; padding: 15px; text-align: center; border-bottom: 1px solid #ddd; }
-        .wrapper { display: flex; max-width: 1200px; margin: 20px auto; gap: 20px; padding: 0 10px; }
-        .sidebar-ad { width: 200px; background: #fff; padding: 10px; border-radius: 8px; text-align: center; min-height: 400px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .main-content { flex: 1; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .bottom-ad { max-width: 1200px; margin: 20px auto; text-align: center; background: #fff; padding: 15px; border-radius: 8px; }
-        @media(max-width: 768px) { .wrapper { flex-direction: column; } .sidebar-ad { width: 100%; min-height: auto; } }
-    </style>
 
     <!-- Google Schema Markup -->
     <script type="application/ld+json">
@@ -30,41 +17,188 @@
       "name": "Typing Master Pro",
       "url": "https://ali7687-sketch.github.io/Typing-Master-12-Pro/",
       "applicationCategory": "EducationalApplication",
-      "operatingSystem": "All"
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
 </head>
 <body>
-
-    <header>
-        <h1 style="margin: 0; font-size: 1.8rem;">Typing Master Pro</h1>
-        <p style="margin: 5px 0 0; color: #666; font-size: 0.95rem;">Online Typing Speed Test & Touch Practice</p>
-    </header>
-
-    <div class="wrapper">
-        <!-- LEFT SIDEBAR AD SLOT (Ad 1: Safe Display Zone) -->
-        <aside class="sidebar-ad">
-            <p style="font-size: 11px; color: #999; margin-bottom: 8px;">Sponsored</p>
-            <!-- Paste your banner ad script or keep container clean -->
-        </aside>
-
-        <!-- MAIN TYPING APP CONTAINER -->
-        <main class="main-content">
-            <div id="app" class="typing-container">
-                <!-- Loaded dynamically by app.js -->
+    <div class="app-window">
+        <!-- Window Header / Title Bar -->
+        <div class="window-header">
+            <div class="window-title">
+                <span class="icon">⌨️</span> Typing Master Pro — Professional Web Edition
             </div>
-        </main>
+            <div class="window-controls">
+                <span class="badge free-badge">100% Free • No Key Required</span>
+            </div>
+        </div>
+
+        <!-- Main Workspace Layout -->
+        <div class="workspace">
+            <!-- Sidebar Navigation (Classic Desktop Style) -->
+            <nav class="sidebar">
+                <div class="nav-brand">
+                    <h2>TypingMaster</h2>
+                    <span class="version">Pro v3.5 Web</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item active" data-tab="curriculum">📚 Touch Typing Course</li>
+                    <li class="nav-item" data-tab="speedtest">⏱️ 1-Min Speed Test</li>
+                    <li class="nav-item" data-tab="keyboard">⌨️ Virtual Keyboard</li>
+                    <li class="nav-item" data-tab="statistics">📊 Progress & Stats</li>
+                    <li class="nav-item" data-tab="certificate">🏆 Speed Certificate</li>
+                </ul>
+
+                <!-- Ad Slot 1: Non-intrusive Sidebar Display Zone -->
+                <div class="sidebar-ad-container">
+                    <span class="ad-label">Sponsored</span>
+                    <div class="ad-box">Clean Display Ad</div>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <!-- Tab 1: Curriculum / Typing Practice -->
+                <section id="curriculum-tab" class="tab-pane active">
+                    <div class="panel-header">
+                        <h3>Interactive Typing Course & Lessons</h3>
+                        <p>Learn touch typing step by step with zero subscription limits.</p>
+                    </div>
+                    <div class="lessons-grid">
+                        <div class="lesson-card" data-lesson="1">
+                            <h4>Class 1: Home Row (ASDF JKL;)</h4>
+                            <p>Master finger positioning on the home row keys.</p>
+                            <button class="btn-start">Start Lesson</button>
+                        </div>
+                        <div class="lesson-card" data-lesson="2">
+                            <h4>Class 2: Top Row Vowels & Consonants</h4>
+                            <p>Expand reach to E, I, R, U, T, Y.</p>
+                            <button class="btn-start">Start Lesson</button>
+                        </div>
+                        <div class="lesson-card" data-lesson="3">
+                            <h4>Class 3: Bottom Row Shift & Keys</h4>
+                            <p>Practice V, M, C, comma, and period.</p>
+                            <button class="btn-start">Start Lesson</button>
+                        </div>
+                        <div class="lesson-card" data-lesson="4">
+                            <h4>Class 4: Numbers & Symbols</h4>
+                            <p>Build dexterity across top-row numbers.</p>
+                            <button class="btn-start">Start Lesson</button>
+                        </div>
+                    </div>
+
+                    <!-- Active Practice Console -->
+                    <div id="practice-console" class="practice-console hidden">
+                        <div class="console-stats-bar">
+                            <div>Gross WPM: <span id="stat-wpm">0</span></div>
+                            <div>Net WPM: <span id="stat-net">0</span></div>
+                            <div>Accuracy: <span id="stat-acc">100%</span></div>
+                            <div>Errors: <span id="stat-err">0</span></div>
+                            <button id="btn-back-lessons" class="btn-secondary">⬅ Back to Lessons</button>
+                        </div>
+
+                        <!-- Virtual Keyboard with Live Key Highlighting -->
+                        <div class="virtual-keyboard-display" id="v-keyboard">
+                            <div class="keyboard-row">
+                                <span class="key" data-key="`">`</span><span class="key" data-key="1">1</span><span class="key" data-key="2">2</span><span class="key" data-key="3">3</span><span class="key" data-key="4">4</span><span class="key" data-key="5">5</span><span class="key" data-key="6">6</span><span class="key" data-key="7">7</span><span class="key" data-key="8">8</span><span class="key" data-key="9">9</span><span class="key" data-key="0">0</span><span class="key" data-key="-">-</span><span class="key" data-key="=">=</span><span class="key backspace">Backspace</span>
+                            </div>
+                            <div class="keyboard-row">
+                                <span class="key tab">Tab</span><span class="key" data-key="q">q</span><span class="key" data-key="w">w</span><span class="key" data-key="e">e</span><span class="key" data-key="r">r</span><span class="key" data-key="t">t</span><span class="key" data-key="y">y</span><span class="key" data-key="u">u</span><span class="key" data-key="i">i</span><span class="key" data-key="o">o</span><span class="key" data-key="p">p</span><span class="key" data-key="[">[</span><span class="key" data-key="]">]</span><span class="key" data-key="\">\</span>
+                            </div>
+                            <div class="keyboard-row">
+                                <span class="key capslock">Caps</span><span class="key home-key" data-key="a">a</span><span class="key home-key" data-key="s">s</span><span class="key home-key" data-key="d">d</span><span class="key home-key" data-key="f">f</span><span class="key" data-key="g">g</span><span class="key" data-key="h">h</span><span class="key home-key" data-key="j">j</span><span class="key home-key" data-key="k">k</span><span class="key home-key" data-key="l">l</span><span class="key home-key" data-key=";">;</span><span class="key" data-key="'">'</span><span class="key enter">Enter</span>
+                            </div>
+                            <div class="keyboard-row">
+                                <span class="key shift">Shift</span><span class="key" data-key="z">z</span><span class="key" data-key="x">x</span><span class="key" data-key="c">c</span><span class="key" data-key="v">v</span><span class="key" data-key="b">b</span><span class="key" data-key="n">n</span><span class="key" data-key="m">m</span><span class="key" data-key=",">,</span><span class="key" data-key=".">.</span><span class="key" data-key="/">/</span><span class="key shift">Shift</span>
+                            </div>
+                            <div class="keyboard-row">
+                                <span class="key spacebar" data-key=" ">SPACEBAR</span>
+                            </div>
+                        </div>
+
+                        <div class="text-display-box" id="text-display"></div>
+                        <input type="text" id="hidden-input" autocomplete="off" autofocus />
+                    </div>
+                </section>
+
+                <!-- Tab 2: Speed Test -->
+                <section id="speedtest-tab" class="tab-pane">
+                    <div class="panel-header">
+                        <h3>1-Minute Professional Speed Test</h3>
+                        <p>Test your professional typing speed and earn a certified score.</p>
+                    </div>
+                    <div class="test-config">
+                        <button class="btn-primary" id="start-speed-test">Start 1-Min Test</button>
+                    </div>
+                    <div id="speed-test-arena" class="hidden">
+                        <div class="timer-display" style="margin-bottom: 15px; font-weight: bold;">Time Remaining: <span id="timer-count">60</span>s</div>
+                        <div class="text-display-box" id="test-text-display"></div>
+                        <input type="text" id="test-hidden-input" autocomplete="off" />
+                    </div>
+                </section>
+
+                <!-- Tab 3: Virtual Keyboard Guide -->
+                <section id="keyboard-tab" class="tab-pane">
+                    <div class="panel-header">
+                        <h3>Touch Typing Posture & Finger Guide</h3>
+                        <p>Learn proper finger placement on the home row keys (ASDF and JKL;).</p>
+                    </div>
+                    <div class="guide-content">
+                        <div class="lesson-card">
+                            <h4>Golden Rules of Touch Typing</h4>
+                            <ul style="padding-left: 20px; line-height: 1.8; color: #94a3b8;">
+                                <li>Always rest your index fingers on the tactile bumps of **F** and **J**.</li>
+                                <li>Keep your wrists floating gently above the desk, not resting flat.</li>
+                                <li>Keep your eyes on the screen, never look down at your fingers.</li>
+                                <li>Practice consistently for 15 minutes every day.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tab 4: Statistics & Progress -->
+                <section id="statistics-tab" class="tab-pane">
+                    <div class="panel-header">
+                        <h3>Your Typing Analytics & Progress</h3>
+                        <p>Track your WPM growth over time.</p>
+                    </div>
+                    <div class="lesson-card">
+                        <h4>Lifetime Best Scores</h4>
+                        <p style="margin-top: 10px;">Highest Net WPM: <strong id="best-wpm" style="color: #10b981;">0</strong></p>
+                        <p style="margin-top: 5px;">Average Accuracy: <strong id="best-acc" style="color: #3b82f6;">100%</strong></p>
+                    </div>
+                </section>
+
+                <!-- Tab 5: Speed Certificate -->
+                <section id="certificate-tab" class="tab-pane">
+                    <div class="panel-header">
+                        <h3>Professional Typing Certificate</h3>
+                        <p>Generate your official completion certificate instantly.</p>
+                    </div>
+                    <div class="certificate-box" id="cert-box">
+                        <h2>Certificate of Typing Proficiency</h2>
+                        <p>This certifies that</p>
+                        <h3>Typing Master Pro User</h3>
+                        <p>has achieved a verified typing speed of</p>
+                        <h1 id="cert-wpm">-- WPM</h1>
+                        <p>with an accuracy rating of <span id="cert-acc">--%</span></p>
+                    </div>
+                    <button class="btn-primary" onclick="window.print()">Print / Save Certificate</button>
+                </section>
+            </main>
+        </div>
+
+        <!-- Ad Slot 2: Bottom Non-Intrusive Ad Banner -->
+        <footer class="app-footer">
+            <div class="bottom-ad-banner">
+                <script async="async" data-cfasync="false" src="https://bauval.org/21/f1768c3808c7c11ba514df01bce5eb2a"></script>
+                <div id="container-f1768c3808c7c11ba514df01bce5eb2a"></div>
+            </div>
+            <p>&copy; 2026 Typing Master Pro. 100% Free Open Educational Tool.</p>
+        </footer>
     </div>
 
-    <!-- BOTTOM AD SLOT (Ad 2: Native Banner Zone) -->
-    <div class="bottom-ad">
-        <p style="font-size: 11px; color: #999; margin-bottom: 8px;">Advertisement</p>
-        <script async="async" data-cfasync="false" src="https://bauval.org/21/f1768c3808c7c11ba514df01bce5eb2a"></script>
-        <div id="container-f1768c3808c7c11ba514df01bce5eb2a"></div>
-    </div>
-
-    <!-- Load Dynamic Typing Application JavaScript -->
     <script src="app.js"></script>
-
 </body>
 </html>
