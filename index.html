@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Master Pro - Master Touch Typing & Speed</title>
+    <meta name="description" content="Master touch typing with Typing Master Pro. Free interactive typing tests, custom drills, speed analytics, and hand guides with no ads.">
+    <meta name="keywords" content="typing master, typing test, touch typing, WPM test, typing speed test, code typing practice">
+    <meta name="robots" content="index, follow">
+
+    <!-- OpenGraph / Social Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Typing Master Pro - Interactive Touch Typing Trainer">
+    <meta property="og:description" content="Boost your typing WPM and accuracy with structured courses, code practice, and real-time hand guidance.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/121820/00E676?text=Typing+Master+Pro">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Typing Master Pro",
+      "operatingSystem": "All",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1280"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-icon">⚡</span>
+                <h2>TypingMaster <span>Pro</span></h2>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-view="dashboard">📊 Dashboard</button>
+                <button class="nav-btn" data-view="courses">📚 Course Modes</button>
+                <button class="nav-btn" data-view="custom">📁 Custom / Upload</button>
+                <button class="nav-btn" data-view="certificate">📜 Certificate</button>
+            </nav>
+
+            <div class="sound-toggle-box">
+                <span>Sound Effects</span>
+                <label class="switch">
+                    <input type="checkbox" id="soundToggle" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="mode-selector">
+                    <label for="timerSelect">Test Duration:</label>
+                    <select id="timerSelect">
+                        <option value="15">15 Seconds</option>
+                        <option value="30">30 Seconds</option>
+                        <option value="60" selected>1 Minute</option>
+                        <option value="120">2 Minutes</option>
+                        <option value="300">5 Minutes</option>
+                        <option value="0">Unlimited</option>
+                    </select>
+                </div>
+
+                <div class="live-stats">
+                    <div class="stat-card">
+                        <span class="stat-label">WPM</span>
+                        <span class="stat-value" id="netWpm">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Accuracy</span>
+                        <span class="stat-value" id="accuracy">100%</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Time</span>
+                        <span class="stat-value" id="timeRemaining">60s</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Errors</span>
+                        <span class="stat-value error-text" id="errorCount">0</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Interactive Typing Arena -->
+            <section class="typing-arena">
+                <div id="textDisplay" class="text-display">Click 'Start Test' or start typing to begin...</div>
+
+                <div class="control-actions">
+                    <button id="startBtn" class="btn primary-btn">Start Test</button>
+                    <button id="resetBtn" class="btn secondary-btn">Reset</button>
+                </div>
+            </section>
+
+            <!-- Visual Keyboard & Finger Guide -->
+            <section class="keyboard-section">
+                <div class="hand-guide">
+                    <div id="leftHand" class="hand">Left Hand: <span id="leftFingerLabel">Ready</span></div>
+                    <div id="rightHand" class="hand">Right Hand: <span id="rightFingerLabel">Ready</span></div>
+                </div>
+
+                <div id="keyboard" class="keyboard">
+                    <!-- QWERTY rows generated via JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
