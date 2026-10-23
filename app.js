@@ -148,7 +148,7 @@ document.getElementById('start-speed-test').addEventListener('click', () => {
         timerEl.textContent = timeLeft;
         if (timeLeft <= 0) {
             clearInterval(countdown);
-            alert('⏰ Test Finished! Check your statistics tab.');
+            alert('⏰ Test Finished! Check your statistics and certificate tabs.');
             document.getElementById('start-speed-test').classList.remove('hidden');
             document.getElementById('speed-test-arena').classList.add('hidden');
         }
