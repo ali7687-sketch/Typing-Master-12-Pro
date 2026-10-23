@@ -11,6 +11,17 @@
     <!-- Load App Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Professional Layout CSS: Side Ad & Bottom Ad Design -->
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
+        header { background: #ffffff; padding: 15px; text-align: center; border-bottom: 1px solid #ddd; }
+        .wrapper { display: flex; max-width: 1200px; margin: 20px auto; gap: 20px; padding: 0 10px; }
+        .sidebar-ad { width: 200px; background: #fff; padding: 10px; border-radius: 8px; text-align: center; min-height: 400px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .main-content { flex: 1; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .bottom-ad { max-width: 1200px; margin: 20px auto; text-align: center; background: #fff; padding: 15px; border-radius: 8px; }
+        @media(max-width: 768px) { .wrapper { flex-direction: column; } .sidebar-ad { width: 100%; min-height: auto; } }
+    </style>
+
     <!-- Google Schema Markup -->
     <script type="application/ld+json">
     {
@@ -25,38 +36,35 @@
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header style="text-align: center; padding: 20px;">
-        <h1>Typing Master Pro</h1>
-        <p>Online Typing Speed Test & Touch Typing Practice</p>
+    <header>
+        <h1 style="margin: 0; font-size: 1.8rem;">Typing Master Pro</h1>
+        <p style="margin: 5px 0 0; color: #666; font-size: 0.95rem;">Online Typing Speed Test & Touch Practice</p>
     </header>
 
-    <main style="max-width: 1000px; margin: 0 auto; padding: 0 15px;">
-        
-        <!-- TYPING APP GAME CONTAINER -->
-        <div id="app" class="typing-container">
-            <!-- App content dynamically loaded by app.js -->
-        </div>
+    <div class="wrapper">
+        <!-- LEFT SIDEBAR AD SLOT (Ad 1: Safe Display Zone) -->
+        <aside class="sidebar-ad">
+            <p style="font-size: 11px; color: #999; margin-bottom: 8px;">Sponsored</p>
+            <!-- Paste your banner ad script or keep container clean -->
+        </aside>
 
-        <!-- ADSTERRA NATIVE BANNER (Non-intrusive banner ad below the typing app) -->
-        <div id="native-ad-section" style="margin: 30px 0; text-align: center;">
-            <script async="async" data-cfasync="false" src="https://bauval.org/21/f1768c3808c7c11ba514df01bce5eb2a"></script>
-            <div id="container-f1768c3808c7c11ba514df01bce5eb2a"></div>
-        </div>
+        <!-- MAIN TYPING APP CONTAINER -->
+        <main class="main-content">
+            <div id="app" class="typing-container">
+                <!-- Loaded dynamically by app.js -->
+            </div>
+        </main>
+    </div>
 
-        <!-- SEO Article Content -->
-        <article style="line-height: 1.7; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
-            <h2>How to Increase Your Typing Speed (WPM)</h2>
-            <p>Touch typing is the ability to type without looking at the keyboard. By placing your index fingers on the home row keys (F and J), you build muscle memory to type faster with fewer errors.</p>
-        </article>
+    <!-- BOTTOM AD SLOT (Ad 2: Native Banner Zone) -->
+    <div class="bottom-ad">
+        <p style="font-size: 11px; color: #999; margin-bottom: 8px;">Advertisement</p>
+        <script async="async" data-cfasync="false" src="https://bauval.org/21/f1768c3808c7c11ba514df01bce5eb2a"></script>
+        <div id="container-f1768c3808c7c11ba514df01bce5eb2a"></div>
+    </div>
 
-    </main>
-
-    <!-- Load Dynamic Typing Application Logic -->
+    <!-- Load Dynamic Typing Application JavaScript -->
     <script src="app.js"></script>
-
-    <!-- ADSTERRA SOCIAL BAR (Appears on screen sides without redirecting clicks) -->
-    <script data-cfasync="false" src="https://bauval.org/14/164d5d901e95767a4fb50e7d24e1803b"></script>
 
 </body>
 </html>
