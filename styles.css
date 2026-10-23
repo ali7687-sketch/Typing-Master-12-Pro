@@ -21,6 +21,7 @@ body { background: var(--bg-main); color: var(--text-primary); font-family: var(
 .nav-menu { display: flex; flex-direction: column; gap: 10px; }
 .nav-btn { background: transparent; border: 1px solid transparent; color: var(--text-muted); padding: 12px 16px; text-align: left; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.2s ease; }
 .nav-btn.active, .nav-btn:hover { background: #232C38; color: var(--accent-emerald); border-color: var(--bg-border); }
+.security-tab-btn { border-color: rgba(0,230,118,0.3); color: var(--accent-emerald); }
 
 .sound-box { display: flex; justify-content: space-between; align-items: center; background: var(--bg-main); padding: 10px; border-radius: 6px; border: 1px solid var(--bg-border); font-size: 0.85rem; }
 .security-badge { font-size: 0.75rem; color: var(--accent-emerald); background: rgba(0,230,118,0.08); padding: 8px; border-radius: 6px; border: 1px solid rgba(0,230,118,0.2); }
@@ -34,6 +35,19 @@ body { background: var(--bg-main); color: var(--text-primary); font-family: var(
 .lbl { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; }
 .val { font-size: 1.3rem; font-weight: 700; color: var(--accent-emerald); }
 .val.err { color: var(--error-red); }
+
+/* Security Telemetry Hub Styling */
+.security-hub-container { background: var(--bg-card); border: 1px solid var(--bg-border); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+.security-hub-container h3 { color: var(--accent-emerald); }
+.security-hub-container p { color: var(--text-muted); font-size: 0.9rem; }
+.sec-metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.sec-card { background: var(--bg-main); border: 1px solid var(--bg-border); padding: 14px; border-radius: 8px; display: flex; flex-direction: column; gap: 4px; }
+.sec-lbl { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; }
+.sec-val { font-size: 1rem; font-weight: bold; color: var(--accent-gold); }
+
+.sec-terminal { background: #0A0E14; border: 1px solid var(--accent-emerald); border-radius: 8px; overflow: hidden; margin-top: 8px; }
+.terminal-header { background: #1B222C; padding: 8px 12px; font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-emerald); border-bottom: 1px solid var(--bg-border); }
+.terminal-body { padding: 12px; font-family: var(--font-mono); font-size: 0.85rem; color: #00E676; line-height: 1.6; max-height: 150px; overflow-y: auto; }
 
 /* Duration Selector Panel Block */
 .duration-selector-panel { background: var(--bg-main); border: 1px solid var(--bg-border); border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
