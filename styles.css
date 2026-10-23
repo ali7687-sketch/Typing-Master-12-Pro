@@ -35,6 +35,13 @@ body { background: var(--bg-main); color: var(--text-primary); font-family: var(
 .val { font-size: 1.3rem; font-weight: 700; color: var(--accent-emerald); }
 .val.err { color: var(--error-red); }
 
+/* Duration Selector Panel Block */
+.duration-selector-panel { background: var(--bg-main); border: 1px solid var(--bg-border); border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.panel-label { font-size: 0.9rem; font-weight: 600; color: var(--accent-gold); }
+.duration-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+.dur-btn { background: var(--bg-card); border: 1px solid var(--bg-border); color: var(--text-muted); padding: 6px 12px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: all 0.2s ease; }
+.dur-btn.active, .dur-btn:hover { background: #232C38; color: var(--accent-emerald); border-color: var(--accent-emerald); }
+
 /* Universal Practice Hub */
 .universal-hub-container { background: var(--bg-card); border: 1px solid var(--bg-border); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
 .hub-header h3 { color: var(--accent-gold); margin-bottom: 4px; }
