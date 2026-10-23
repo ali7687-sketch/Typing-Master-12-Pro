@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Master Ultra 2026 - Master Touch Typing Platform</title>
-    <meta name="description" content="Enterprise-grade touch typing platform featuring step-by-step lengthy curriculum, dictation exercises, universal custom file practice hub, and AI speed racing.">
-    <meta name="keywords" content="typing master, touch typing, dictation typing, code typing, long paragraph typing, wpm test">
+    <meta name="description" content="Enterprise-grade touch typing platform featuring customizable timer durations, lengthy curriculum, dictation exercises, universal custom file practice hub, and AI speed racing.">
+    <meta name="keywords" content="typing master, touch typing, dictation typing, code typing, timer typing test, wpm speed trainer">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#121820">
 
@@ -41,7 +41,7 @@
             </div>
 
             <div class="security-badge">
-                <span class="shield">🛡️</span> Cyber Guard & Input Sanitizer Active
+                <span class="shield">🛡️</span> Cyber Guard & Sanitizer Active
             </div>
         </aside>
 
@@ -54,7 +54,7 @@
                     <div class="stat"><span class="lbl">Gross WPM</span><span class="val" id="grossWpm">0</span></div>
                     <div class="stat"><span class="lbl">Net WPM</span><span class="val" id="netWpm">0</span></div>
                     <div class="stat"><span class="lbl">Accuracy</span><span class="val" id="accuracy">100%</span></div>
-                    <div class="stat"><span class="lbl">Time Left</span><span class="val" id="timeRemaining">60s</span></div>
+                    <div class="stat"><span class="lbl">Time Left</span><span class="val" id="timeRemaining">3m</span></div>
                     <div class="stat"><span class="lbl">Errors</span><span class="val err" id="errorCount">0</span></div>
                 </div>
             </header>
@@ -116,6 +116,18 @@
 
             <!-- Typing Practice Arena -->
             <section class="typing-arena">
+                <!-- Practice Duration Selector Block -->
+                <div class="duration-selector-panel">
+                    <span class="panel-label">⏱️ Select Test Duration:</span>
+                    <div class="duration-buttons">
+                        <button class="dur-btn" data-time="120">2 Minutes</button>
+                        <button class="dur-btn active" data-time="180">3 Minutes</button>
+                        <button class="dur-btn" data-time="300">5 Minutes</button>
+                        <button class="dur-btn" data-time="600">10 Minutes</button>
+                        <button class="dur-btn" data-time="1200">20 Minutes</button>
+                    </div>
+                </div>
+
                 <!-- AI Ghost Track -->
                 <div id="ghostTrack" class="ghost-track hidden">
                     <div class="racer ai-racer" id="aiCar">🤖 AI Ghost (60 WPM)</div>
