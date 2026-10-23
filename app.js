@@ -1,6 +1,6 @@
 /**
  * Typing Master Ultra 2026 Engine
- * Built for High-Precision Input Handling & Lengthy Prose Engine
+ * Built with Configurable Practice Durations (2m, 3m, 5m, 10m, 20m)
  */
 
 // Step-by-Step Curriculum Data
@@ -38,7 +38,8 @@ let totalKeystrokes = 0;
 let correctKeystrokes = 0;
 let startTime = null;
 let timer = null;
-let timeRemaining = 60;
+let selectedDuration = 180; // Default 3 minutes in seconds
+let timeRemaining = 180;
 let isTesting = false;
 let aiTimer = null;
 let aiProgress = 0;
@@ -73,6 +74,27 @@ const startBtn = document.getElementById('startBtn');
 const resetBtn = document.getElementById('resetBtn');
 const leftFingerLabel = document.getElementById('leftFingerLabel');
 const rightFingerLabel = document.getElementById('rightFingerLabel');
+
+// Time Format Helper (e.g., 180s -> 3m, 1200s -> 20m)
+function formatTimeDisplay(sec) {
+    const mins = Math.floor(sec / 60);
+    const remSec = sec % 60;
+    if (mins > 0 && remSec === 0) return `${mins}m`;
+    if (mins > 0) return `${mins}m ${remSec}s`;
+    return `${sec}s`;
+}
+
+// Duration Selection Button Listeners
+document.querySelectorAll('.dur-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('.dur-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedDuration = parseInt(btn.getAttribute('data-time'));
+        initTest();
+        btn.blur();
+    });
+});
 
 // Navigation Tabs
 document.querySelectorAll('.nav-btn').forEach(btn => {
@@ -131,7 +153,7 @@ function initTest() {
     errors = 0;
     totalKeystrokes = 0;
     correctKeystrokes = 0;
-    timeRemaining = 60;
+    timeRemaining = selectedDuration;
     isTesting = false;
     startTime = null;
     aiProgress = 0;
@@ -139,7 +161,7 @@ function initTest() {
     clearInterval(timer);
     clearInterval(aiTimer);
     
-    if (timeEl) timeEl.textContent = `${timeRemaining}s`;
+    if (timeEl) timeEl.textContent = formatTimeDisplay(timeRemaining);
     if (grossWpmEl) grossWpmEl.textContent = '0';
     if (netWpmEl) netWpmEl.textContent = '0';
     if (accuracyEl) accuracyEl.textContent = '100%';
@@ -177,7 +199,7 @@ function startTimer() {
     
     timer = setInterval(() => {
         timeRemaining--;
-        if (timeEl) timeEl.textContent = `${timeRemaining}s`;
+        if (timeEl) timeEl.textContent = formatTimeDisplay(timeRemaining);
         calculateStats();
         
         if (timeRemaining <= 0) {
@@ -267,7 +289,6 @@ document.addEventListener('keydown', (e) => {
             if (spanNodes[currentIndex]) spanNodes[currentIndex].className = 'char-wrong';
         }
         
-        // Auto-Scroll Text Arena for Lengthy Essays
         if (spanNodes[currentIndex]) {
             spanNodes[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
         }
